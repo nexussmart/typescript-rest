@@ -26,7 +26,8 @@
     "test:integration": "cross-env NODE_ENV=test mocha --opts ./test/mocha-integration.opts --exit",
     "test:unit": "cross-env NODE_ENV=test mocha --opts ./test/mocha-unit.opts --exit",
     "test:coverage": "nyc npm test",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "prepare": "npm run build"
   },
   "nyc": {
     "include": [
