@@ -74,7 +74,7 @@ export function Path(path: string) {
  * GET http://mydomain/people/123 (For all authorized users)
  * ```
  */
-export function Security(roles?: string | Array<string>) {
+export function Security(name: string, roles?: string | Array<string>) {
     roles = _.castArray(roles || '*');
     return new ServiceDecorator('Security').withProperty('roles').withValue(roles)
         .createDecorator();
