@@ -1,52 +1,35 @@
 {
-  "name": "typescript-rest",
-  "version": "2.0.0",
-  "description": "A Library to create RESTFul APIs with Typescript",
-  "author": "Thiago da Rosa de Bustamante <thiago@cruxframework.org>",
-  "keywords": [
-    "API",
-    "REST",
-    "RESTFul",
-    "service",
-    "microservice",
-    "typescript",
-    "node server"
+  "_args": [
+    [
+      "github:nexussmart/typescript-rest"
+    ]
   ],
-  "main": "./dist/typescript-rest.js",
-  "typings": "./dist/typescript-rest.d.ts",
-  "license": "MIT",
-  "scripts": {
-    "start": "tsc -w",
-    "build": "npm run clean && tsc",
-    "clean": "rimraf dist",
-    "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
-    "lint:fix": "tslint --fix ./src/**/*.ts ./test/**/*.ts -t verbose",
-    "pretest": "cross-env NODE_ENV=test npm run build && npm run lint",
-    "test": "cross-env NODE_ENV=test mocha --exit",
-    "test:integration": "cross-env NODE_ENV=test mocha --opts ./test/mocha-integration.opts --exit",
-    "test:unit": "cross-env NODE_ENV=test mocha --opts ./test/mocha-unit.opts --exit",
-    "test:coverage": "nyc npm test",
-    "tsc": "tsc",
-    "prepare": "npm run build"
+  "_from": "github:nexussmart/typescript-rest",
+  "_id": "typescript-rest@github:nexussmart/typescript-rest#e8e32da701700cea5caac7a24e02819783875fd9",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/typescript-rest",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "github:nexussmart/typescript-rest",
+    "rawSpec": "github:nexussmart/typescript-rest",
+    "saveSpec": "github:nexussmart/typescript-rest",
+    "fetchSpec": null,
+    "gitCommittish": null
   },
-  "nyc": {
-    "include": [
-      "src/**/*.ts"
-    ],
-    "extension": [
-      ".ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-      "text-summary",
-      "json",
-      "html"
-    ],
-    "report-dir": "./reports/coverage",
-    "sourceMap": true,
-    "instrument": true
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:nexussmart/typescript-rest#e8e32da701700cea5caac7a24e02819783875fd9",
+  "_spec": "github:nexussmart/typescript-rest",
+  "_where": "/Users/Brice/Sources/api",
+  "author": {
+    "name": "Thiago da Rosa de Bustamante",
+    "email": "thiago@cruxframework.org"
+  },
+  "bugs": {
+    "url": "https://github.com/thiagobustamante/typescript-rest/issues"
   },
   "dependencies": {
     "@types/body-parser": "1.17.0",
@@ -69,6 +52,7 @@
     "swagger-ui-express": "^4.0.1",
     "yamljs": "^0.3.0"
   },
+  "description": "A Library to create RESTFul APIs with Typescript",
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/fs-extra": "5.0.4",
@@ -102,19 +86,64 @@
     "typescript": "^3.2.2",
     "typescript-ioc": "^1.2.5"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/thiagobustamante/typescript-rest.git"
-  },
-  "bugs": {
-    "url": "https://github.com/thiagobustamante/typescript-rest/issues"
-  },
   "directories": {
     "lib": "dist",
     "doc": "doc"
   },
+  "engineStrict": true,
   "engines": {
     "node": ">=6.0.0"
   },
-  "engineStrict": true
+  "homepage": "https://github.com/thiagobustamante/typescript-rest#readme",
+  "keywords": [
+    "API",
+    "REST",
+    "RESTFul",
+    "service",
+    "microservice",
+    "typescript",
+    "node server"
+  ],
+  "license": "MIT",
+  "main": "./dist/typescript-rest.js",
+  "name": "typescript-rest",
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "json",
+      "html"
+    ],
+    "report-dir": "./reports/coverage",
+    "sourceMap": true,
+    "instrument": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagobustamante/typescript-rest.git"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.json --declaration",
+    "clean": "rimraf dist",
+    "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
+    "lint:fix": "tslint --fix ./src/**/*.ts ./test/**/*.ts -t verbose",
+    "prepare": "npm run build",
+    "pretest": "cross-env NODE_ENV=test npm run build && npm run lint",
+    "start": "tsc -w",
+    "test": "cross-env NODE_ENV=test mocha --exit",
+    "test:coverage": "nyc npm test",
+    "test:integration": "cross-env NODE_ENV=test mocha --opts ./test/mocha-integration.opts --exit",
+    "test:unit": "cross-env NODE_ENV=test mocha --opts ./test/mocha-unit.opts --exit",
+    "tsc": "tsc -p tsconfig.json --declaration"
+  },
+  "typings": "./dist/typescript-rest.d.ts",
+  "version": "2.0.0"
 }
