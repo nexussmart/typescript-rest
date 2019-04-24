@@ -131,7 +131,7 @@
     "url": "git+https://github.com/thiagobustamante/typescript-rest.git"
   },
   "scripts": {
-    "build": "npm run clean && tsc -p tsconfig.json --declaration",
+    "build": "npm run clean && tsc --declaration",
     "clean": "rimraf dist",
     "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
     "lint:fix": "tslint --fix ./src/**/*.ts ./test/**/*.ts -t verbose",
